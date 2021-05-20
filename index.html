@@ -59,7 +59,7 @@
 
         <section id="transaction">
             <h2 class="sr-only">Transações</h2>
-<a href="#" class="button new"> + Nova Transação</a>
+    <a href="#" onclick="Modal.Open()" class="button new"  > + Nova Transação</a>
                 
 
             <table id="data-table">
@@ -73,47 +73,14 @@
                     </tr>
 
                 </thead>
-                <tbody>
-                    <tr>
-                        <td class="description">Luz</td>
-                        <td class="income">R$ 500,00</td>
-                        <td class="date">23/01/2021</td>
-                        <th>
-                            <img src="./assets/minus.svg" alt="Remover transação">
-                        </th>
-
-                    </tr>
-
-                    <tr>
-                        <td class="description">Criação website</td>
-                        <td class="income">R$ 5.000,00</td>
-                        <td class="date">23/01/2021</td>
-                        <th>
-                            <img src="./assets/minus.svg" alt="Remover transação">
-                        </th>
-
-                    </tr>
-                    <tr>
-                        <td class="description">internet</td>
-                        <td class="expense">R$ 200,00</td>
-                        <td class="date">23/01/2021</td>
-                        <th>
-                            <img src="./assets/minus.svg" alt="Remover transação">
-                        </th>
-
-                    </tr>
-
-
-                </tbody>
+                <tbody></tbody>
 
             </table>
         </section>
 
-
-
     </main>
           
-   <div class="modal-overlay active">
+   <div class="modal-overlay">
     <div class="modal">
         <div id="form">
             <h2>Nova transação</h2>
@@ -128,10 +95,35 @@
 
                 <div class="input-group">
                     <label class="sr-only" for="amount">Amount</label>
-                    <input type="text"
+                    <input type="number"
+                    step="0.01"
                      id="amount" 
                     name="amount"
-                    placeholder="amout">
+                    placeholder="0.00">
+
+                    <small class="help">
+                        Use o sinal - (negativo) para despesas e ,(virgula) para casas decimais
+                    </small>
+                </div>
+
+                       <div class="input-group">
+                        <label class="sr-only"
+                         for="date">Data</label>
+                        <input 
+                        type="date"
+                         id="date" 
+                        name="date"
+                        />
+                    </div>
+                    <div class="input-group actions">
+                        <a href="#" 
+                        onclick="Modal.Close()"
+                        class="button cancel"
+                        
+                        >Cancelar</a>
+                        <button>Salvar</button>
+                    </div>
+
                 </div>
 
 
@@ -146,8 +138,8 @@
         <p>dev.finace$</p>
     </footer>
 
-
-
+    <script src='./scripts.js'></script>
+ 
 
 </body>
 
