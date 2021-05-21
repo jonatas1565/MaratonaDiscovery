@@ -95,7 +95,7 @@ const DOM = {
 
     }
 }
-
+//funcionalidade das contas
 const Utils = {
     formatCurrency(value){
         const signal = Number(value) < 0 ? "-":""
