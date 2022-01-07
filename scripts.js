@@ -1,26 +1,26 @@
 const Modal = {
-    open(){
+    Open(){
         // Abrir modal
         // Adicionar a class active ao modal
         document
-            .querySelector('.modal-overlay')
+            .querySelector(".modal-overlay")
             .classList
-            .add('active')
+            .add("active")
 
     },
-    close(){
+    Close(){
         // fechar o modal
         // remover a class active do modal
         document
-            .querySelector('.modal-overlay')
+            .querySelector(".modal-overlay")
             .classList
-            .remove('active')
+            .remove("active")
     }
 }
 
 const Storage = {
     get() {
-        return JSON.parse(localStorage.getItem("dev.finances:transactions")) || []
+        return JSON.parse(localStorage.getItem("dev.finances:transaction")) || []
     },
 
     set(transactions) {
@@ -192,7 +192,7 @@ const Form = {
             const transaction = Form.formatValues()
             Transaction.add(transaction)
             Form.clearFields()
-            Modal.close()
+            Modal.Close()
         } catch (error) {
             alert(error.message)
         }
